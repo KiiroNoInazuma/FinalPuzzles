@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Ambiguity {
 
     static int multiDigitNumber(int num) {
@@ -19,9 +17,16 @@ public class Ambiguity {
         return number;
     }
 
+    static int task(int num) {
+        int result = 0;
+        while (num > 0) {
+            result += num % 10;
+            num /= 10;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        System.out.println(multiDigitNumber(58461));
-
-
+        System.out.println(task(123));
     }
 }
